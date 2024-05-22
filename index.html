@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradleys Furniture Carriers</title>
+    <link rel="website icon" type="png" href="./images/web-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/mse4ehy.css">
+</head>
+<body>
+<main>
+    <div class="landing-page-top-image">
+        <img class="landing-image" type="jpg" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/StockSnap_KSVNE2NWQP-1920x1280-1920w.jpg" alt="An antique pocket watch in the palm of a hand">
+        <div class="text-fading-container">
+            <div class="text-fading">
+                <p class="text-fading-large">Antiques & Fine Art Specialists</p>
+                <p class="text-fading-small">With over 30 years experience</p>
+            </div>
+            <div class="text-fading">
+                <p class="text-fading-large">Auction Rooms</p>
+                <p class="text-fading-small">We collect and deliver to auction houses on an almost daily basis. Contact us for more details.</p>
+            </div>
+            <div class="text-fading">
+                <p class="text-fading-large">Fine Art Removals and Installations</p>
+                <p class="text-fading-small">Trust us to handle your fine art with the care and attention it deserves</p>
+            </div>
+            <div class="text-fading">
+                <p class="text-fading-large">Antique Collections & Deliveries</p>
+                <p class="text-fading-small">From all over the UK, to all over the world</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="globe-div">
+        <h1 class="landing-text globe-text1" >Around the UK to around the globe</h1>
+        <hr>
+        <h4 class="landing-text globe-text2">Bradleys have been in the moving and antique transport business for over 30 years with a combined wealth of experience spanning 70 years there isn’t anything we haven’t packed or shipped.</h4>
+        <h4 class="landing-text globe-text3">UK and European transport are carried out in our own vehicles with our experienced, capable and friendly staff. Worldwide shipments are packed by us and we have agents worldwide who will deliver and install on our behalf.</h4>
+    </div>
+
+    <div class="landing-country-box">
+        <a href="regular-deliveries.html" id="country-but1" class="landing-country-but">
+            <img id="count-img1" class="landing-country-img" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/Mallorca1-1920w.jpg">
+            <p id="lct1" class="landing-country-text">Mallorca Deliveries</p>
+        </a>
+        <a href="regular-deliveries.html" id="country-but2" class="landing-country-but">
+            <img id="count-img2" class="landing-country-img" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/london+crop-1920w.jpg">
+            <p id="lct2" class="landing-country-text">London Deliveries</p>
+        </a>
+        <a href="regular-deliveries.html" id="country-but3" class="landing-country-but">
+            <img id="count-img3" class="landing-country-img" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/IMG_5591-1920w.JPG">
+            <p id="lct3" class="landing-country-text">Ireland Deliveries</p>
+        </a>
+    </div>
+    
+    
+
+</main>
+
+    
+
+
+
+    <!-- HEADER + FOOTER BELOW -->
+    <header>
+        <a href="index.html"><img class="logo" src="https://lirp.cdn-website.com/824e2ea7/import/clib/removals_org_uk/dms3rep/multi/opt/Bradleys+FC+logo-503x124-285w.png"></a>
+
+        <div class="dropdown">
+            <button class="dropbtn"><div class="dropbtncont"></div><div class="dropbtncont"></div><div class="dropbtncont"></div></button>
+            <div class="dropdown-content">
+              <a href="regular-deliveries.html">Regular Deliveries</a>
+              <a href="collectionsandfirearms.html">Collections & Firearms</a>
+              <a href="shipping.html">Shipping</a>
+              <a href="removalsandstorage.html">Removals & Storage</a>
+              <a href="insurance.html">Insurance</a>
+              <a href="contactus.html">Contact Us</a>
+            </div>
+          </div>
+
+    </header>
+
+    <div class="arrow"></div>
+
+
+    
+    <footer>
+        
+    </footer>
+    
+
+
+
+
+    <script>
+        function logoSize(){
+            var logo = document.querySelector(".logo");
+            var screenHeight = window.innerHeight;
+            var screenWidth = window.innerWidth;
+            
+            if (screenWidth < 901){
+                logo.style.width = '180px';
+                
+            }else{
+                logo.style.width = '20%';
+
+            }
+        }
+
+        window.addEventListener('resize', logoSize)
+        window.addEventListener('load', logoSize)
+
+
+        
+        
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('click', function(event) {
+                console.log("Click event detected!");
+                var dropdown = document.querySelector('.dropdown'); // Select by class name
+                console.log("Dropdown:", dropdown);
+                if (dropdown && !dropdown.contains(event.target)) {
+                    var dropdownContent = dropdown.querySelector('.dropdown-content'); // Select dropdown content by class name
+                    console.log("Dropdown Content:", dropdownContent);
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdown = document.querySelector('.dropdown'); // Select dropdown element
+    
+            dropdown.addEventListener('click', function() {
+                var dropdownContent = this.querySelector('.dropdown-content'); // Select dropdown content
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block'; // Toggle display
+            });
+        });
+    </script>
+    <script>
+        function handleScroll() {
+    var lastScrollTop = 0; // Initialize variable to store the last scroll position
+    var screenWidth = window.innerWidth
+    var dropbtn = document.querySelector('.dropbtn');
+    if (screenWidth < 700){
+            // Scrolling down
+            var header = document.querySelector('header'); // Select the header element
+            header.style.height = '50px'; // Adjust the height
+            header.style.transition = 'height 0.8s'; // Add transition for smooth animation
+
+            
+            var logo = document.querySelector('.logo'); // Select the logo element
+            logo.style.width = '13%'; // Shrink the logo width
+            logo.style.transition = 'width 0.8s'; // Add transition for smooth animation
+            
+            var dropbtnConts = document.querySelectorAll('.dropbtncont'); // Select all elements with class 'dropbtncont'
+            dropbtnConts.forEach(function(dropbtnCont) { // Iterate over each element
+                dropbtnCont.style.width = '20px'; // Change width
+                dropbtnCont.style.height = '2px'; // Change height
+                dropbtnCont.style.transition = 'width 0.8s, height 0.8s'; // Add transition for smooth animation
+                dropbtn.style.backgroundColor = 'transparent';
+                dropbtn.style.boxShadow = 'none';
+            });
+        }else{
+
+
+    
+    window.addEventListener('scroll', function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Get current scroll position
+        
+
+        
+            // Check scroll direction
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            var header = document.querySelector('header'); // Select the header element
+            header.style.height = '50px'; // Adjust the height
+            header.style.transition = 'height 0.8s'; // Add transition for smooth animation
+            
+            var logo = document.querySelector('.logo'); // Select the logo element
+            logo.style.width = '13%'; // Shrink the logo width
+            logo.style.transition = 'width 0.8s'; // Add transition for smooth animation
+            
+            var dropbtnConts = document.querySelectorAll('.dropbtncont'); // Select all elements with class 'dropbtncont'
+            dropbtnConts.forEach(function(dropbtnCont) { // Iterate over each element
+                dropbtnCont.style.width = '20px'; // Change width
+                dropbtnCont.style.height = '2px'; // Change height
+                dropbtnCont.style.transition = 'width 0.8s, height 0.8s'; // Add transition for smooth animation
+                dropbtn.style.backgroundColor = 'transparent';
+                dropbtn.style.boxShadow = 'none';
+            });
+        } else {
+            // Scrolling up
+            var header = document.querySelector('header'); // Select the header element
+            header.style.height = '100px'; // Restore the height
+            header.style.transition = 'height 0.8s'; // Add transition for smooth animation
+            
+            var logo = document.querySelector('.logo'); // Select the logo element
+            logo.style.width = '20%'; // Restore the logo width
+            logo.style.transition = 'width 0.8s'; // Add transition for smooth animation
+            
+            var dropbtnConts = document.querySelectorAll('.dropbtncont'); // Select all elements with class 'dropbtncont'
+            dropbtnConts.forEach(function(dropbtnCont) { // Iterate over each element
+                dropbtnCont.style.width = '30px'; // Restore width
+                dropbtnCont.style.height = '3px'; // Restore height
+                dropbtnCont.style.transition = 'width 0.8s, height 0.8s'; // Add transition for smooth animation
+                dropbtn.style.backgroundColor = '#f5f5f7';
+                dropbtn.style.boxShadow = '0px 15px 20px rgba(0,0,0,0.2)';
+            });
+        }
+    
+        
+
+        
+        
+        lastScrollTop = currentScroll; // Update last scroll position
+    });}
+}
+
+// Call the function to enable the scroll effect
+handleScroll();
+
+    </script>
+    <script>
+        function fading_top(){
+            var fading_text_cont = document.querySelector('.text-fading-container');
+        var screenWidth = window.innerWidth;
+        if (screenWidth < 700){
+            fading_text_cont.style.top = '100px';
+        }else{
+            fading_text_cont.style.top = '50%';
+        }
+        }
+        window.addEventListener('resize', fading_top)
+        window.addEventListener('load', fading_top)
+    </script>
+    <script>
+        function globetextSize(){
+            var globeText1 = document.querySelector('.globe-text1');
+            var globeText2 = document.querySelector('.globe-text2');
+            var globeText3 = document.querySelector('.globe-text3');
+            var screenWidth = window.innerWidth;
+            var globediv = document.querySelector('.globe-div');
+
+            if (screenWidth > 699 && screenWidth < 901){
+                globediv.style.top = '900px'
+            }
+            
+            
+            if (screenWidth < 700){
+                globeText1.style.fontSize = '20px';
+                globeText2.style.fontSize = '10px';
+                globeText3.style.fontSize = '10px';
+                globeText3.style.transform = 'translateX(0)';
+                globeText2.style.transform = 'translateX(0)';
+                globeText3.style.width = '100%';
+                globeText2.style.width = '100%';
+                globediv.style.top = '125%';
+                
+            }else{
+                globeText1.style.fontSize = '40px';
+                globeText2.style.fontSize = '15px';
+                globeText3.style.fontSize = '15px';
+                globeText3.style.width = '125%';
+                globeText2.style.width = '125%';
+                globeText3.style.transform = 'translateX(-10%)';
+                globeText2.style.transform = 'translateX(-10%)';
+                globediv.style.top = '115%';
+
+
+
+            }
+        }
+        window.addEventListener('resize', globetextSize)
+        window.addEventListener('load', globetextSize)
+    </script>
+    <script>
+        function changecountrybut(){
+            var screenWidth = window.innerWidth;
+            var ccb = document.getElementsByClassName('landing-country-but');
+            var lc_box = document.querySelector('.landing-country-box');
+            if (screenWidth > 950){
+                ccb[0].style.width = '300px';
+                ccb[1].style.width = '300px';
+                ccb[2].style.width = '300px';
+
+                ccb[0].style.height = '300px';
+                ccb[1].style.height = '300px';
+                ccb[2].style.height = '300px';
+                
+                lc_box.style.top = '150%'
+            }else{
+                if (screenWidth > 700){
+                    ccb[0].style.width = '150px';
+                    ccb[1].style.width = '150px';
+                    ccb[2].style.width = '150px';
+
+                    ccb[0].style.height = '150px';
+                    ccb[1].style.height = '150px';
+                    ccb[2].style.height = '150px';
+                    lc_box.style.top = '155%'
+                }else{
+                    ccb[0].style.width = '100px';
+                    ccb[1].style.width = '100px';
+                    ccb[2].style.width = '100px';
+
+                    ccb[0].style.height = '100px';
+                    ccb[1].style.height = '100px';
+                    ccb[2].style.height = '100px';
+                    lc_box.style.top = '160%'
+                }
+                
+
+            }
+        }
+        window.addEventListener('resize', changecountrybut)
+        window.addEventListener('load', changecountrybut)
+    </script>
+    <script>
+        function landing_countries(){
+            var screenWidth = window.innerWidth;
+            var lc1 = document.getElementById('lct1');
+            var lc2 = document.getElementById('lct2');
+            var lc3 = document.getElementById('lct3');
+
+            var ci1 = document.getElementById('count-img1');
+            var ci2 = document.getElementById('count-img2');
+            var ci3 = document.getElementById('count-img3');
+
+            var cb1 = document.getElementById('country-but1');
+            var cb2 = document.getElementById('country-but2');
+            var cb3 = document.getElementById('country-but3');
+            
+            if (screenWidth > 900){
+                lc1.style.fontSize = '26px';
+                lc2.style.fontSize = '26px';
+                lc3.style.fontSize = '26px';
+
+                ci1.style.filter = '';
+                ci2.style.filter = '';
+                ci3.style.filter = '';
+
+                lc1.style.opacity = '';
+                lc2.style.opacity = '';
+                lc3.style.opacity = '';
+
+            }else{
+                ci1.style.filter = 'brightness(70%)';
+                ci2.style.filter = 'brightness(70%)';
+                ci3.style.filter = 'brightness(70%)';
+
+                lc1.style.opacity = '1';
+                lc2.style.opacity = '1';
+                lc3.style.opacity = '1';
+
+                
+           
+                if (screenWidth > 700){
+                    lc1.style.fontSize = '21px';
+                    lc2.style.fontSize = '21px';
+                    lc3.style.fontSize = '21px';
+                }else{
+                    lc1.style.fontSize = '12px';
+                    lc2.style.fontSize = '12px';
+                    lc3.style.fontSize = '12px';
+                }
+            }
+        }
+        window.addEventListener('resize', landing_countries)
+        window.addEventListener('load', landing_countries)
+    </script>
+    
+    
+    
+    
+
+
+</body>
+</html>

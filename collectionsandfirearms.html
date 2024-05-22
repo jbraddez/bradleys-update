@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradleys Furniture Carriers</title>
+    <link rel="website icon" type="png" href="./images/web-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+
+
+
+    <!-- HEADER + FOOTER BELOW -->
+    <header>
+        <a href="index.html"><img class="logo" src="https://lirp.cdn-website.com/824e2ea7/import/clib/removals_org_uk/dms3rep/multi/opt/Bradleys+FC+logo-503x124-285w.png"></a>
+
+        <div class="dropdown">
+            <button class="dropbtn"><div class="dropbtncont"></div><div class="dropbtncont"></div><div class="dropbtncont"></div></button>
+            <div class="dropdown-content">
+              <a href="regular-deliveries.html">Regular Deliveries</a>
+              <a href="collectionsandfirearms.html">Collections & Firearms</a>
+              <a href="shipping.html">Shipping</a>
+              <a href="removalsandstorage.html">Removals & Storage</a>
+              <a href="insurance.html">Insurance</a>
+              <a href="contactus.html">Contact</a>
+            </div>
+          </div>
+
+    </header>
+
+
+    
+    <footer>
+        
+    </footer>
+    
+
+
+    <script>
+        function logoSize(){
+            var logo = document.querySelector(".logo");
+            var screenHeight = window.innerHeight;
+            var screenWidth = window.innerWidth;
+            
+            if (screenWidth < 901){
+                logo.style.width = '180px';
+                
+            }else{
+                logo.style.width = '20%';
+
+            }
+        }
+
+        window.addEventListener('resize', logoSize)
+        window.addEventListener('load', logoSize)
+
+
+        
+        
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('click', function(event) {
+                console.log("Click event detected!");
+                var dropdown = document.querySelector('.dropdown'); // Select by class name
+                console.log("Dropdown:", dropdown);
+                if (dropdown && !dropdown.contains(event.target)) {
+                    var dropdownContent = dropdown.querySelector('.dropdown-content'); // Select dropdown content by class name
+                    console.log("Dropdown Content:", dropdownContent);
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdown = document.querySelector('.dropdown'); // Select dropdown element
+    
+            dropdown.addEventListener('click', function() {
+                var dropdownContent = this.querySelector('.dropdown-content'); // Select dropdown content
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block'; // Toggle display
+            });
+        });
+    </script>
+    <script>
+        function handleScroll() {
+    var lastScrollTop = 0; // Initialize variable to store the last scroll position
+    var screenWidth = window.innerWidth
+    var dropbtn = document.querySelector('.dropbtn');
+    if (screenWidth < 700){
+            // Scrolling down
+            var header = document.querySelector('header'); // Select the header element
+            header.style.height = '50px'; // Adjust the height
+            header.style.transition = 'height 0.8s'; // Add transition for smooth animation
+
+            
+            var logo = document.querySelector('.logo'); // Select the logo element
+            logo.style.width = '13%'; // Shrink the logo width
+            logo.style.transition = 'width 0.8s'; // Add transition for smooth animation
+            
+            var dropbtnConts = document.querySelectorAll('.dropbtncont'); // Select all elements with class 'dropbtncont'
+            dropbtnConts.forEach(function(dropbtnCont) { // Iterate over each element
+                dropbtnCont.style.width = '20px'; // Change width
+                dropbtnCont.style.height = '2px'; // Change height
+                dropbtnCont.style.transition = 'width 0.8s, height 0.8s'; // Add transition for smooth animation
+                dropbtn.style.backgroundColor = 'transparent';
+                dropbtn.style.boxShadow = 'none';
+            });
+        }else{
+
+
+    
+    window.addEventListener('scroll', function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Get current scroll position
+        
+
+        
+            // Check scroll direction
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            var header = document.querySelector('header'); // Select the header element
+            header.style.height = '50px'; // Adjust the height
+            header.style.transition = 'height 0.8s'; // Add transition for smooth animation
+            
+            var logo = document.querySelector('.logo'); // Select the logo element
+            logo.style.width = '13%'; // Shrink the logo width
+            logo.style.transition = 'width 0.8s'; // Add transition for smooth animation
+            
+            var dropbtnConts = document.querySelectorAll('.dropbtncont'); // Select all elements with class 'dropbtncont'
+            dropbtnConts.forEach(function(dropbtnCont) { // Iterate over each element
+                dropbtnCont.style.width = '20px'; // Change width
+                dropbtnCont.style.height = '2px'; // Change height
+                dropbtnCont.style.transition = 'width 0.8s, height 0.8s'; // Add transition for smooth animation
+                dropbtn.style.backgroundColor = 'transparent';
+                dropbtn.style.boxShadow = 'none';
+            });
+        } else {
+            // Scrolling up
+            var header = document.querySelector('header'); // Select the header element
+            header.style.height = '100px'; // Restore the height
+            header.style.transition = 'height 0.8s'; // Add transition for smooth animation
+            
+            var logo = document.querySelector('.logo'); // Select the logo element
+            logo.style.width = '20%'; // Restore the logo width
+            logo.style.transition = 'width 0.8s'; // Add transition for smooth animation
+            
+            var dropbtnConts = document.querySelectorAll('.dropbtncont'); // Select all elements with class 'dropbtncont'
+            dropbtnConts.forEach(function(dropbtnCont) { // Iterate over each element
+                dropbtnCont.style.width = '30px'; // Restore width
+                dropbtnCont.style.height = '3px'; // Restore height
+                dropbtnCont.style.transition = 'width 0.8s, height 0.8s'; // Add transition for smooth animation
+                dropbtn.style.backgroundColor = '#f5f5f7';
+                dropbtn.style.boxShadow = '0px 15px 20px rgba(0,0,0,0.2)';
+            });
+        }
+    
+        
+
+        
+        
+        lastScrollTop = currentScroll; // Update last scroll position
+    });}
+}
+
+// Call the function to enable the scroll effect
+handleScroll();
+
+    </script>
+    
+    
+    
+    
+
+
+</body>
+</html>
